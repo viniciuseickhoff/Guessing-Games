@@ -16,10 +16,25 @@ After the computer guesses the correct number it will prompt you if you want to 
 
 That's the game. No cheating! Haha
 
+Running instructions:
+
+```shell
+ginozab@aldenv141:~/Git repo/Guessing Games/Computer Guess$ gcc ComputerGuess.c -o ComputerGuess
+ginozab@aldenv141:~/Git repo/Guessing Games/Computer Guess$ ./ComputerGuess 
+```
+
 Here is an example run of the game:
 
 ```shell
-
+Hello user! Please pick a number between 1 and 100.
+My first guess is 50. How did I do?
+1
+Hmmm, my guess was too high. My next guess is 25. How did I do?
+-1
+Hmmm, my guess was too low. My next guess is 37. How did I do?
+0
+Yay, I got it in 3 tries! Your number was 37
+Would you like to play again (y/n)? n
 ```
 
 # User Guess
