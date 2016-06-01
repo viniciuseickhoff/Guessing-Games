@@ -2,14 +2,14 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define true 1 // define true so I could use it in while loop
+#define true 1 // define true so I could use it in while
 #define false (!true) // define false so I could break the while loop
 
 int main() {
 
 	time_t now;
 	time(&now);
-	printf("Brandon Ginoza \nLab2\n%s\n",ctime(&now)); // prints out time name and lab
+	printf("Brandon Ginoza \nLabsssaaa\n%s\n",ctime(&now)); // prints out time name and lab
 	char answer; // user input character y or n that answers if the user wants to play again
 	int num; // int variable that holds random number
 		while(true){ // while loop that runs each game
