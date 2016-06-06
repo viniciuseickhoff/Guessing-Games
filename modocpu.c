@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <time.h>
+#include "includes.h"
 
 int initGameMode()
 {
-	
 
 
 

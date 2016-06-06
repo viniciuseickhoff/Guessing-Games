@@ -1,0 +1,32 @@
+define verdadeiro para laços do while
+define falso para quebrar os laços while
+escreve o tempo e o nome do trabalho
+caracteres usado como entrada do usuário para perguntar se eles querem jogar novamente
+int usados ​​para a entrada do usuário 1 0 -1
+jogo principal while
+saudação jogo
+computadores primeira suposição
+inicializar o contador
+inicializar o contador
+começar a marca de alta palpite a 100
+começar de baixo ponto de adivinhar 0
+while para a lógica do jogo
+digitalizar em entrada do usuário
+acrescenta ao contador para cada palpite
+if para entrada do usuário 1, significa alta
+define o valor elevado suposição igual à estimativa actual
+define o valor elevado suposição igual à estimativa actual
+encontra diferença entre a estimativa atual e do actual baixo palpite
+gera o próximo palpite atual dividindo diferença por dois e subtraindo-o palpite atual originais
+imprime o próximo palpite
+if para entrada do usuário -1, a lógica se palpite é para baixo
+define corrente de baixa palpite igual ao palpite atual
+encontra diferença entre alta palpite atual e palpite atual
+gera próxima palpite atual dividindo differece (temp) por dois e adicioná-lo ao palpite atual originais
+imprime próxima palpite atual
+imprime o número de tentativas e o número final
+quebra o loop do jogo lógica
+solicita entrada do usuário
+scans em entrada do usuário
+se o usuário não quiser jogar novamente
+quebrar o ciclo de jogo principal
