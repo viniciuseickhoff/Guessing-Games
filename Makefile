@@ -1,12 +1,12 @@
+include libconfig/Makefile
 IDIR =include
 CC=gcc
-CFLAGS=-I$(IDIR)
+CFLAGS=-I$(IDIR) -Llibconfig
 
 ODIR=./
-LDIR =./libconfig
+LDIR =libconfig/lib/
 
 LIBS=-lm
-
 _DEPS = includes.h GuessGame.c modocpu.c
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
