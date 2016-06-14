@@ -1,11 +1,7 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = lib doc tinytest tests
-
-if BUILDEXAMPLES
-SUBDIRS += examples
-endif
+SUBDIRS = lib doc 
 
 .PHONY: dist-rpm
 
@@ -38,4 +34,4 @@ dist-hook:
 	rm -rf `find $(distdir)/contrib -name .svn`
 
 test:
-	cd tests && ./libconfig_tests
+	

@@ -8,7 +8,7 @@
 #define true 1 			// define true needed for while loop
 #define false (!true) 	// define false needed to break while loops
 
-int main(){
+int initGameModeZero(){
 
 	time_t now;
 	time(&now);
