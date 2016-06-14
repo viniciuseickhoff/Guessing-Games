@@ -3,30 +3,22 @@
 #include "constants.h"
 #define EN 1
 #define PT 2
-#define getLanguage(a) a == 1 ? EN : PT
+#define getLanguage(a) a == 1 ? 1 : 2
 int main(void) {
-    int l = 0;
-    printf("Choose your Language | Escolha sua Lingua");
-    printf("\n1- English (USA)\n");
-    printf("2- Portugues (BR)");
-    scanf("%d",&l);
-    #define CURR_LANG getLanguage(l)
-    config_t cfg, *cf;
-    const config_setting_t *retries;
-    const char *base = NULL;
-    int count, n, enabled;
-    
-    cf = &cfg;
-    config_init(cf);
+    int currLang = 1;
+       config_t cfg;
+        config_setting_t *setting;
+        const char *str;
 
-    if (!config_read_file(cf, "lang.cfg")) {
-        fprintf(stderr, "%s:%d - %s\n",
-            config_error_file(cf),
-            config_error_line(cf),
-            config_error_text(cf));
-        config_destroy(cf);
-        return -1;
- }
+        config_init(&cfg);
+
+        if (!config_read_file(&cfg, "game.cfg")) {
+                fprintf(stderr, "%s:%d - %s\n", config_error_file(&cfg),
+                        config_error_line(&cfg), config_error_text(&cfg));
+                config_destroy(&cfg);
+        }
+         config_lookup_string(&cfg, variableName, &str);
+
   LANG *lang;
   
   
