@@ -9,7 +9,7 @@
 #define false (!true) 	// define false needed to break while loops
 
 int initGameModeZero(){
-
+         printf("false");
 	time_t now;
 	time(&now);
 	printf("Brandon Ginoza\nLab 3\n%s\n", ctime(&now)); // prints out name lab and time
