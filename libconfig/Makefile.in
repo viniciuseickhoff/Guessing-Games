@@ -164,7 +164,7 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 CSCOPE = cscope
-DIST_SUBDIRS = lib doc
+DIST_SUBDIRS = lib doc tinytest tests examples
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -337,7 +337,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I m4
-SUBDIRS = lib doc $(am__append_1)
+SUBDIRS = lib doc tinytest tests $(am__append_1)
 EXTRA_DIST = \
 	m4/*.m4 \
 	*.sln \
@@ -856,7 +856,7 @@ dist-hook:
 	rm -rf `find $(distdir)/contrib -name .svn`
 
 test:
-	
+	cd tests && ./libconfig_tests
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -3,7 +3,6 @@
 #include "constants.h"
 #define EN 0
 #define PT 1
-#define getLanguage(a) a == 0 ? en-us : pt-br
 config_t cfg;
 int main(void) {
     int currLang = 1;
@@ -12,7 +11,7 @@ int main(void) {
     int gameMode;
  config_setting_t *setting;
         const char *str;
-  LANG *lang;
+  LANG *Lang;
         config_init(&cfg);
 
         if (!config_read_file(&cfg, "game.cfg")) {
@@ -23,8 +22,6 @@ int main(void) {
          config_lookup_string(&cfg, "lang.welcome", &str);
          printf("%s",str);
          scanf("%d", &currLang);
-         sprintf(dummy,"lang.%s.gamemode",getLanguage(currLang));
-         printf("%s",dummy);
          scanf("%d",gameMode);
          config_destroy(&cfg);
          config_init(&cfg);
@@ -33,6 +30,9 @@ int main(void) {
                         config_error_line(&cfg), config_error_text(&cfg));
                 config_destroy(&cfg);
         }
+         config_lookup_string(&cfg,"lang.gamemode",dummy);
+         printf("%s",dummy);
+         scanf("%d",gameMode);
          config_lookup_string(&cfg,"lang.ola",Lang->ola);
 	 config_lookup_string(&cfg,"lang.olauser",Lang->olauser);	
 	 config_lookup_string(&cfg,"lang.primeiraguess",Lang->primeiraguess);	
@@ -45,13 +45,13 @@ int main(void) {
 	 config_lookup_string(&cfg,"lang.unumero",Lang->unumero);	
 	 config_lookup_string(&cfg,"lang.jogardnv",Lang->jogardnv);	
          if(gameMode == 0) {
-           initGameModeZero();
+        //   initGameModeZero();
    }
         if(gameMode == 1) {
-	initGameMode();
+	//initGameMode();
  }
-        if(gameMOde == 2) {
-                initCustomGameMode();
+        if(gameMode == 2) {
+      //          initCustomGameMode();
          }   
          
          
