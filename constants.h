@@ -1,5 +1,5 @@
 typedef struct {
-    char *ola,*olauser,*primeiraguess,*comofui,*mtalta,*proximaguess,*mtbaixa,*consegui,*tentativas,*unumero,*jogardnv;
+    char *ola,*olauser,*primeiraguess,*comofui,*mtalta,*proximaguess,*mtbaixa,*consegui,*tentativas,*unumero,*jogardnv,*suaguess;
 } LANG;
 LANG *initLang() {
     LANG *l = malloc(sizeof(LANG));
@@ -14,5 +14,6 @@ l->consegui = malloc(sizeof(char) * 100);
 l->tentativas = malloc(sizeof(char) * 100);
 l->unumero = malloc(sizeof(char) * 100);
 l->jogardnv = malloc(sizeof(char) * 100);
+l->suaguess = malloc(sizeof(char) * 100);
     return l;
 }
